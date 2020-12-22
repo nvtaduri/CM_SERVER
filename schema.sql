@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS posts;
+
+CREATE TABLE posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person TEXT NOT NULL,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status TEXT NOT NULL,
+    assigned TEXT NOT NULL,
+    priority TEXT NOT NULL,
+    type TEXT NOT NULL,
+    description TEXT NOT NULL
+);
