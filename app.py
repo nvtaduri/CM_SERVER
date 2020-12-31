@@ -1,5 +1,6 @@
 import sqlite3
 from flask import Flask, render_template, request, url_for, flash, redirect,jsonify
+from flask_cors import CORS
 from werkzeug.exceptions import abort
 from search import SearchForm
 import unicodedata
@@ -10,6 +11,7 @@ from urllib.parse import parse_qs
 
 
 app = Flask(__name__)
+CORS(app)
 app.config['SECRET_KEY'] = 'your secret key'
 app.config['ENV'] = 'development'
 app.config['DEBUG'] = True
